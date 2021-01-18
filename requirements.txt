@@ -4,3 +4,4 @@ tensorboardX==1.9
 scikit-image==0.15.0
 ipython==7.9.0
 tqdm==4.40.2
+lpips==0.1.3

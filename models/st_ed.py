@@ -24,12 +24,12 @@ from .encoder import Encoder
 from .decoder import Decoder
 from .discriminator import PatchGAN
 import losses
-from .PerceptualSimilarity.lpips_models import PerceptualLoss
 from .gazeheadnet import GazeHeadNet
 from .gazeheadResnet import GazeHeadResNet
 from core import DefaultConfig
 import numpy as np
 import torch.nn.functional as F
+import lpips
 config = DefaultConfig()
 
 
@@ -48,7 +48,7 @@ class STED(nn.Module):
             (dof + 1) * num_feats for dof, num_feats in self.configuration])
         self.encoder = Encoder(self.num_all_pseudo_labels, self.num_all_embedding_features, self.configuration).to("cuda")
         self.decoder = Decoder(self.num_all_embedding_features).to("cuda")
-        self.lpips = PerceptualLoss(model='net-lin', net='alex').to("cuda")
+        self.lpips = lpips.LPIPS(model='net-lin', net='alex').to("cuda")
         self.GazeHeadNet_train = GazeHeadNet().to("cuda")
         self.GazeHeadNet_eval = GazeHeadResNet().to("cuda")
         self.discriminator = PatchGAN(input_nc=3).to('cuda')

@@ -19,7 +19,7 @@
     "save_interval": 10000,
     "size_0d_unit": 1024,
     "num_1d_units": 4,
-    "size_1d_unnit": 16,
+    "size_1d_unit": 16,
     "num_2d_uits": 4,
     "size_2d_unit": 16,
     "coeff_l1_loss":200.0,

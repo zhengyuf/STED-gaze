@@ -3,8 +3,8 @@
 # NVIDIA Source Code License (1-Way Commercial)
 # Code written by Seonwook Park, Shalini De Mello
 # --------------------------------------------------------
-
 # Code modified by Yufeng Zheng
+# --------------------------------------------------------
 import os
 import torch
 from torch import nn

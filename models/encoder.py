@@ -1,7 +1,9 @@
 # --------------------------------------------------------
 # Copyright (C) 2019 NVIDIA Corporation. All rights reserved.
 # NVIDIA Source Code License (1-Way Commercial)
-# Code written by Seonwook Park, Shalini De Mello, Yufeng Zheng.
+# Code written by Seonwook Park, Shalini De Mello
+# --------------------------------------------------------
+# Code modified by Yufeng Zheng
 # --------------------------------------------------------
 import torch
 import torch.nn as nn
